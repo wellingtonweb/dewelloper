@@ -45,30 +45,58 @@
 </head>
 <body>
     <div id="content" class="container mx-auto px-4">
+        <div class="mt-4">
+            <nav aria-label="Breadcrumb">
+              <ol role="list" class="mx-auto flex max-w-2xl items-center space-x-2 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+                <li>
+                  <div class="flex items-center">
+                    <a href="#contacts" class="mr-2 text-sm font-medium text-indigo-500 hover:text-indigo-400">Contatos</a>
+                    <svg width="16" height="20" viewBox="0 0 16 20" fill="currentColor" aria-hidden="true" class="h-5 w-4 text-gray-300">
+                      <path d="M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z" />
+                    </svg>
+                  </div>
+                </li>
+                <li>
+                  <div class="flex items-center">
+                    <a href="#summary" class="mr-2 text-sm font-medium text-indigo-500 hover:text-indigo-400">Resumo Profissional</a>
+                    <svg width="16" height="20" viewBox="0 0 16 20" fill="currentColor" aria-hidden="true" class="h-5 w-4 text-gray-300">
+                      <path d="M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z" />
+                    </svg>
+                  </div>
+                </li>
+                <li class="text-sm">
+                  <a href="#experience" aria-current="page" class="font-medium text-indigo-500 hover:text-indigo-400">Experiência</a>
+                </li>
+              </ol>
+            </nav>
+        </div>
         <header>
             <h1>Wellington Dias Ferreira</h1>
             <p>Desenvolvedor Full Stack</p>
         </header>
-
-        <section class="contact-info">
+        <section id="contacts" class="contacts">
             <div class="mt-10">
               <h3 class="text-sm font-medium text-gray-900">Contatos</h3>
               <div class="mt-4">
                 <ul role="list" class="list-disc space-y-2 pl-4 text-sm">
-                  <li class="text-gray-400"><span class="text-gray-600">E-mail: <a href="mailto:wellingtondiasferreira@email.com">wellingtondiasferreira@email.com</a></span></li>
-                  <li class="text-gray-400"><span class="text-gray-600">Telefone: (xx) xxxxx-xxxx</span></li>
-                  <li class="text-gray-400"><span class="text-gray-600">LinkedIn: <a href="https://linkedin.com/in/wellingtondiasferreira">linkedin.com/in/wellingtondiasferreira</a></span></li>
+                  <li class="text-gray-400">E-mail: <span class="text-gray-600"><a href="mailto:wellingtonweb@gmail.com">wellingtonweb@gmail.com</a></span></li>
+                  <li class="text-gray-400">Telefone: <span class="text-gray-600">(28) 99948-9262</span></li>
+                  <li class="text-gray-400">LinkedIn: <span class="text-gray-600"><a href="https://linkedin.com/in/wellingtondiasferreira">linkedin.com/in/wellingtondiasferreira</a></span></li>
                 </ul>
               </div>
             </div>
         </section>
 
-        <section class="summary">
-            <h2>Resumo Profissional</h2>
-            <p>Desenvolvedor Full Stack com experiência sólida em desenvolvimento de aplicações web e mobile. Expertise em linguagens de programação como JavaScript, Python e SQL, além de frameworks modernos como React, Node.js e Django. Comprovada habilidade em trabalhar em equipes ágeis e entregar projetos de alta qualidade dentro do prazo.</p>
+        <section id="summary" class="summary">
+            <div class="mt-10">
+              <h2 class="text-sm font-medium text-gray-900">Resumo Profissional</h2>
+              <div class="mt-4 space-y-6">
+                <p class="text-sm text-gray-600">Desenvolvedor Full Stack com experiência sólida em desenvolvimento de aplicações web e mobile. Expertise em linguagens de programação como JavaScript, Python e SQL, além de frameworks modernos como React, Node.js e Django. Comprovada habilidade em trabalhar em equipes ágeis e entregar projetos de alta qualidade dentro do prazo.</p>
+              </div>
+            </div>
         </section>
 
-        <section class="experience">
+        <section id="experience" class="experience">
             <h2>Experiência Profissional</h2>
             <h3>Desenvolvedor Full Stack</h3>
             <p><strong>Empresa XYZ</strong></p>
@@ -80,14 +108,14 @@
             </ul>
         </section>
 
-        <section class="education">
+        <section id="education" class="education">
             <h2>Educação</h2>
             <p><strong>Bacharelado em Ciência da Computação</strong></p>
             <p><strong>Universidade XYZ</strong></p>
             <p>Período: MM/AAAA - MM/AAAA</p>
         </section>
 
-        <section class="skills">
+        <section id="skills" class="skills">
             <h2>Habilidades Técnicas</h2>
             <ul>
                 <li>Linguagens: JavaScript, Python, HTML/CSS, SQL</li>
@@ -98,7 +126,7 @@
             </ul>
         </section>
 
-        <section class="projects">
+        <section id="projects" class="projects">
             <h2>Projetos Relevantes</h2>
             <div class="project">
                 <h3>Sistema de Gestão de Tarefas</h3>
