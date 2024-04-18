@@ -32,12 +32,10 @@
                     rounded-md
                     "
                   >
-                   <div>
-                      <a href="#">
-                        <svg class="stroke-indigo-500 h-16 w-16" data-slot="icon">
+                   <div class="flex justify-center content-center">
+                        <svg class="stroke-indigo-500" data-slot="icon" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24">
                           <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5"></path>
                         </svg>
-                      </a>
                     </div>
                    
                      <svg
@@ -172,8 +170,11 @@
         </div>
         
         <section>
-            <button id="btnPDF" type="button" class="rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-                <i class="fa-solid fa-file-pdf mr-1"></i>Download</button>
+            <div class="flex justify-center content-center">
+                <button id="btnPDF" type="button" class="rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                    <i class="fa-solid fa-file-pdf mr-1"></i>Download
+                </button>
+            </div>
         </section>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
