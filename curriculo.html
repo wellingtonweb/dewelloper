@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Currículo de Wellington Dias Ferreira</title>
+    <title>Currículo - Wellington Dias Ferreira</title>
     
     <style>
         body {
@@ -45,7 +45,7 @@
     </style>
 </head>
 <body>
-    <div class="container mx-auto px-4">
+    <div id="content" class="container mx-auto px-4">
         <header>
             <h1>Wellington Dias Ferreira</h1>
             <p>Desenvolvedor Full Stack</p>
@@ -103,7 +103,27 @@
                 <p>Criação de um blog pessoal utilizando Django, com funcionalidades de autenticação de usuários, postagem de artigos e comentários.</p>
             </div>
         </section>
+        <section>
+            <button id="btnPDF" type="button" class="rounded-sm bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Versão PDF</button>
+        </section>
     </div>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.debug.js"></script>
+    <script>
+        var doc = new jsPDF(); 
+        var specialElementHandlers = { 
+            '#editor': function (element, renderer) { 
+                return true; 
+            } 
+        };
+        $('#btnPDF').click(function () { 
+            doc.fromHTML($('#content').html(), 15, 15, { 
+                'width': 190, 
+                    'elementHandlers': specialElementHandlers 
+            }); 
+            doc.save('curriculo-wellington.pdf'); 
+        });
+    </script>
 </body>
 </html>
