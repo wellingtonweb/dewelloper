@@ -271,8 +271,8 @@
         function generatePdf() {
             let jsPdf = new jsPDF('p', 'pt', 'a4');
             /*let jsPdf = new jsPDF('p', 'mm', [600, 400]);*/
-            jsPdf.addFont('./fontawesome-webfont.ttf', 'fontawesome-webfont', 'normal', 'StandardEncoding');
-            jsPdf.setFont('fontawesome-webfont', 'normal');
+            jsPdf.addFont('./fontawesome-webfont.ttf', 'FontAwesome', 'normal', 'StandardEncoding');
+            jsPdf.setFont('FontAwesome', 'normal');
             var htmlElement = document.getElementById('content');
             // you need to load html2canvas (and dompurify if you pass a string to html)
             const opt = {
@@ -289,17 +289,7 @@
                     letterRendering: true,
                     logging: false,
                     scale: .5
-                },
-                fontFaces: [
-                    {
-                    family: "fontawesome-webfont",
-                    style: "normal",
-                    src: [{
-                        url: font,
-                        format: "truetype"
-                    }],
-                    }
-                ]
+                }
                 
             };
 
