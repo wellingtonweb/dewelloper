@@ -6,6 +6,53 @@
     <title>Currículo - Wellington Dias Ferreira</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Nunito');
+      .parent{ font-family: 'Nunito', sans-serif;}
+      body{
+          font-family:inherit;
+      }
+      
+      #content.pdf-mode {
+        width: 210mm;
+        min-height: 297mm;
+        padding: 10mm;
+        box-shadow: none;
+        margin: 0;
+        font-size: small;
+      }
+
+      #loading-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10000;
+      }
+
+      #loading-message {
+        font-size: 24px;
+        font-weight: bold;
+        color: #fff;
+        text-align: center;
+        line-height: 1.5;
+      }
+
+      @media print {
+        body {
+          margin: 0;
+          font-family:inherit;
+        }
+        #content {
+          box-shadow: none;
+        }
+      }
+    </style>
 </head>
 <body class="bg-slate-100 m-0 p-0 text-gray-500 font-mono text-base">
     <div class="flex flex-col h-screen">
@@ -93,111 +140,105 @@
             </div>
         </header>
         <main class="flex-1 overflow-y-auto p-5">
-            <div id="content" class="container bg-white rounded-md mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+            <div id="content" class="container bg-white rounded-md mx-auto max-w-7xl px-8 py-20 sm:px-8 lg:px-16">
                 <header>
                     <h1 class="text-lg font-bold text-gray-900">Wellington Dias Ferreira</h1>
-                    <p class="text-gray-500">Desenvolvedor Full Stack</p>
+                    <p class="text-gray-600">Desenvolvedor Full Stack</p>
                 </header>
-                <section id="contacts" class="contacts mt-5">
+                <section id="contacts" class="contacts mt-3">
                     <div class="mt-4">
                       <h3 class="text-lg font-bold text-gray-900">Contatos</h3>
-                      <p class="font-medium text-gray-500"><a href="mailto:wellingtonweb@gmail.com">wellingtonweb@gmail.com</a></p>
-                      <p class="font-medium text-gray-500">(28)99948-9262</p>
-                      <p class="font-medium text-gray-500"><a href="https://linkedin.com/in/wellingtondiasferreira">linkedin.com/in/wellingtondiasferreira</a></p>
+                      <p class="font-medium text-gray-600"><a href="mailto:wellingtonweb@gmail.com">wellingtonweb@gmail.com</a></p>
+                      <p class="font-medium text-gray-600">(28)99948-9262</p>
+                      <p class="font-medium text-gray-600"><a href="https://linkedin.com/in/wellingtondiasferreira">linkedin.com/in/wellingtondiasferreira</a></p>
                     </div>
                 </section>
         
-                <section id="summary" class="summary mt-5">
+                <section id="summary" class="summary mt-3">
                     <div>
                       <h2 class="text-lg font-bold text-gray-900">Resumo Profissional</h2>
                       <div class="mt-4 space-y-6">
-                        <p class="text-gray-500">Desenvolvedor Full Stack com experiência em desenvolvimento de aplicações web, bem como website corporativo, e-commerces, integrações com APIs (Própria, Cielo, Getnet e Fiserv) e sistema de gestão de pagamentos (com dashboards, relatórios e controle de usuários). Conhecimentos em linguagens de programação como PHP, JavaScript (Vanilla JS e JQuery), Typescript (estudando) e SQL; além de frameworks modernos como Laravel, Vue.js, React (básico), Tailwind CSS e Bootstrap.  Comprovada habilidade em entregar projetos otimizados e de alta qualidade.</p>
+                        <p class="text-gray-600">Desenvolvedor Full Stack, autodidata, com experiência em website corporativo, e-commerces, integrações com APIs (Própria, Cielo, Getnet e Fiserv) e sistema OmniPay (gestão com dashboards, relatórios e controle de usuários). Conhecimentos em PHP, JavaScript (Vanilla JS e JQuery), Typescript (iniciando), SQL e UI&UX; além de frameworks modernos como Laravel, Vue.js, React (iniciando), Tailwind CSS e Bootstrap. Comprovada habilidade em entregar projetos otimizados e de alta qualidade.</p>
                       </div>
                     </div>
                 </section>
         
-                <section id="experience" class="experience mt-5">
+                <section id="experience" class="experience mt-3">
                     <div>
                         <h2 class="text-lg font-bold text-gray-900">Experiência Profissional</h2>
                         <div class="mt-4 space-y-6">
                             <ul role="list" class="list-none space-y-2 pl-4">
-                                <li class="text-gray-500"><h3 class="font-semibold text-gray-800">Desenvolvedor Full Stack - Windx Telecomunicações (03/2015 - Atual)</h3></li>
+                                <li class="text-gray-600"><h3 class="font-semibold">Desenvolvedor Full Stack - Windx Telecomunicações (03/2015 - Atual)</h3></li>
                                 <ul role="list" class="list-none space-y-2 pl-4">
-                                    <li class="text-gray-500">Desenvolvimento e manutenção de e-commerces utilizando Laravel para front-end e back-end (API).</li>
-                                    <li class="text-gray-500">Integrações com gateways de pagamento como SITEF (FISERV), CIELO (3DS 2.0), PAY&GO, GETNET e PICPAY.</li>
-                                    <li class="text-gray-500">Colaboração para entrega de novos recursos e resolução de problemas.</li>
-                                    <li class="text-gray-500">Integração de APIs de terceiros.</li>
+                                    <li class="text-gray-600">Desenvolvimento de e-commerces com Laravel no front-end e back-end (API); Integrações com gateways de pagamento SITEF, CIELO (3DS 2.0), PAY&GO, GETNET e PICPAY; Colaboração para resolução de problemas em sistemas administrativos; Integrações de APIs (externas e interna) e Gestão de servidores (Proxmox e Linux).</li>
                                 </ul>
                         </div>
                     </div>
                 </section>
         
-                <section id="education" class="education mt-5">
+                <section id="education" class="education mt-3">
                     <div>
                         <h2 class="text-lg font-bold text-gray-900">Educação</h2>
                         <div class="mt-4 space-y-6">
                             <ul role="list" class="list-none space-y-2 pl-4">
-                                <li class="text-gray-500"><h3 class="font-semibold text-gray-800">Bacharelado em Análise e Desenvolvimento de Sistemas</h3></li>
+                                <li class="text-gray-600"><h3 class="font-semibold">Bacharelado em Análise e Desenvolvimento de Sistemas</h3></li>
                                 <ul role="list" class="list-none space-y-2 pl-4">
-                                    <li class="text-gray-500">Centro Universitário da Cidade - RJ</li>
+                                    <li class="text-gray-600">Centro Universitário da Cidade - RJ</li>
                                 </ul>
-                                <li class="text-gray-500"><h3 class="font-semibold text-gray-800">UpInside Treinamentos</h3></li>
+                                <li class="text-gray-600"><h3 class="font-semibold">UpInside Treinamentos</h3></li>
                                 <ul role="list" class="list-none space-y-2 pl-4">
-                                    <li class="text-gray-500">Laravel Developer</li>
-                                    <li class="text-gray-500">HTML5 e CSS3 Essentials</li>
-                                    <li class="text-gray-500">Devtools Essentials</li>
-                                    <li class="text-gray-500">Composer na prática</li>
+                                    <li class="text-gray-600">Laravel Developer, HTML5 e CSS3 Essentials, Devtools Essentials e Composer na prática.</li>
                                 </ul>
                             </ul>
                         </div>
                </section>
         
-                <section id="skills" class="skills mt-5">
+                <section id="skills" class="skills mt-3">
                     <div>
                         <h2 class="text-lg font-bold text-gray-900">Habilidades Técnicas</h2>
                         <div class="mt-4 space-y-6">
-                            <ul role="list" class="list-none space-y-2 pl-4">
-                                <li class="text-gray-600 font-semibold">Linguagens: <span class="text-gray-500">PHP, JavaScript, SQL, HTML e CSS</span></li>
-                                <li class="text-gray-600 font-semibold">Frameworks: <span class="text-gray-500">Laravel, React.js, Vue.js, Tailwind CSS e Bootstrap</span></li>
-                                <li class="text-gray-600 font-semibold">Banco de Dados: <span class="text-gray-500">MySQL e PostgreSQL</span></li>
-                                <li class="text-gray-600 font-semibold">Ferramentas: <span class="text-gray-500">Git, VSCode e Docker (básico)</span></li>
+                            <ul role="list" class="list-none space-y-1 pl-4">
+                                <li class="text-gray-600"><span class="font-semibold">Linguagens: </span>PHP, JavaScript, SQL, HTML e CSS</li>
+                                <li class="text-gray-600"><span class="font-semibold">Frameworks: </span>Laravel, React.js, Vue.js, Tailwind CSS e Bootstrap</li>
+                                <li class="text-gray-600"><span class="font-semibold">Banco de Dados: </span>MySQL e PostgreSQL</li>
+                                <li class="text-gray-600"><span class="font-semibold">Ferramentas: </span>Git, VSCode e Docker (básico)</li>
                             </ul>
                         </div>
                     </div>
                 </section>
         
-                <section id="projects" class="projects mt-5">
+                <section id="projects" class="projects mt-3">
                     <h2 class="text-lg font-bold text-gray-900">Projetos</h2>
                     <div class="mt-4 space-y-6">
                         <ul role="list" class="list-none space-y-2 pl-4">
-                            <li class="text-gray-500"><h3 class="font-semibold text-gray-800">Sistema de e-commerce + Central do Assinante Windx Telecomunicações (front-end)</h3></li>
+                            <li class="text-gray-600"><h3 class="font-semibold">Central do Assinante Windx (e-commerce)</h3></li>
                             <ul role="list" class="list-none space-y-2 pl-4">
-                                <li class="text-gray-500">Desenvolvimento completo de sistema web para pagamento de faturas, utilizando Laravel (PHP + JavaScript + Bootstrap) e implementação de autenticação de usuários. </li>
+                                <li class="text-gray-600">Sistema web para pagamento de faturas (Laravel + JavaScript + JQuery + Bootstrap), implementação de autenticação de usuários e integração com API interna. </li>
                             </ul>
 
-                            <li class="text-gray-500"><h3 class="font-semibold text-gray-800">Integração de pagamento via WhatsApp (Fluctus x Windx Telecomunicações)</h3></li>
+                            <li class="text-gray-600"><h3 class="font-semibold">Integração de pagamento via WhatsApp (Fluctus x Windx)</h3></li>
                             <ul role="list" class="list-none space-y-2 pl-4">
-                                <li class="text-gray-500">Desenvolvimento de integração back-end com API do WhatsApp através do Autoatendimento do sistema omnichannel Fluctus para pagamento com Pix e Picpay.</li>
+                                <li class="text-gray-600">Desenvolvimento da integração de API local + Fluctus (sistema omnichannel com IA), para geração de qrcode de pagamentos com Pix e Picpay.</li>
                             </ul>
 
-                            <li class="text-gray-500"><h3 class="font-semibold text-gray-800">Sistema de e-commerce - Terminais Windx Telecomunicações (Terminais de Autoatendimento - front-end)</h3></li>
+                            <li class="text-gray-600"><h3 class="font-semibold">Autoatendimento Windx (Terminais de Autoatendimento - e-commerce)</h3></li>
                             <ul role="list" class="list-none space-y-2 pl-4">
-                                <li class="text-gray-500">Desenvolvimento completo de sistema web para pagamento de faturas, utilizando Laravel (PHP + JavaScript + Bootstrap). Implementação de autenticação de usuários, utilizando CPF do cliente (multiplos cadastros) e restrição de uso mediante token exclusivo do terminal.</li>
+                                <li class="text-gray-600">Sistema web para pagamento de faturas Windx (Laravel + JavaScript + JQuery + Bootstrap), com autenticação de usuários utilizando CPF do cliente (multiplos cadastros) e integração com API interna.</li>
                             </ul>
 
-                            <li class="text-gray-500"><h3 class="font-semibold text-gray-800">Sistema de gestão e-commerce - Windx Telecomunicações (front-end)</h3></li>
+                            <li class="text-gray-600"><h3 class="font-semibold">Sistema OmniPay - Windx (gestão de pagamentos)</h3></li>
                             <ul role="list" class="list-none space-y-2 pl-4">
-                                <li class="text-gray-500">Desenvolvimento completo de sistema web para gestão de pagamentos de faturas Windx, utilizando Laravel (PHP + JavaScript + Bootstrap) com banco de dados MariaDB. Implementação de autenticação de usuários, dashboards (diário e mensal), datatables com multiplos filtros, relatórios, controle de log do sistema e do usuário.</li>
+                                <li class="text-gray-600">Sistema web de gestão de pagamentos de faturas Windx (Laravel + JavaScript + JQuery + Bootstrap + MariaDB), autenticação e controle de usuários, dashboards, datatables com multiplos filtros, relatórios, controles de log.</li>
                             </ul>
                             
-                            <li class="text-gray-500"><h3 class="font-semibold text-gray-800">API REST (back-end)</h3></li>
+                            <li class="text-gray-600"><h3 class="font-semibold">API REST - Windx (back-end)</h3></li>
                             <ul role="list" class="list-none space-y-2 pl-4">
-                                <li class="text-gray-500">Atualização e manutenção de API REST, utilizando Laravel com banco de dados MariaDB, implementação de novos métodos de pagamento, atualizações de segurança, integrações com APIs externas (gatways de pagamento) para modalidades como Crédito, Débito (utilizando 3DS 2.0), Pix e Picpay.</li>
+                                <li class="text-gray-600">Manutenção de API REST (Laravel + MariaDB), atualizações de segurança, integrações com gatways de pagamento (Crédito e Débito utilizando Cielo 3DS 2.0, Pix e Picpay).</li>
                             </ul>
 
-                            <li class="text-gray-500"><h3 class="font-semibold text-gray-800">Website corporativo - Windx Telecomunicações</h3></li>
+                            <li class="text-gray-600"><h3 class="font-semibold">Website corporativo - Windx</h3></li>
                             <ul role="list" class="list-none space-y-2 pl-4">
-                                <li class="text-gray-500">Criação de web corporativo utilizando Laravel, Bootstrap e JavaScript, com funcionalidade de FAQ e pesquisa dinâmica.</li>
+                                <li class="text-gray-600">Web corporativo utilizando Laravel, Bootstrap e JavaScript, com funcionalidade de FAQ e pesquisa dinâmica.</li>
                             </ul>
                         </ul>
                     </div>
@@ -210,8 +251,74 @@
             </button>
         </footer>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-    <script src="main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script>
+      var curriculo = document.getElementById("content"), 
+            button = document.getElementById('btnPDF');
+        
+        function generatePdf() {
+          const loadingOverlay = document.createElement("div");
+          loadingOverlay.id = "loading-overlay";
+          loadingOverlay.innerHTML = '<div id="loading-message">Aguarde<br>Gerando PDF...</div>';
+          document.body.appendChild(loadingOverlay);
+
+          curriculo.classList.add("pdf-mode");
+
+          html2canvas(curriculo, {
+            scale: 2,
+            useCORS: true,
+          }).then((canvas) => {
+            const imgData = canvas.toDataURL("image/png");
+            const pdf = new jspdf.jsPDF("p", "mm", "a4");
+
+            const pdfWidth = 210;
+            const pdfHeight = 297;
+
+            const canvasWidth = canvas.width;
+            const canvasHeight = canvas.height;
+
+            const pageHeightPx = (pdfHeight * canvasWidth) / pdfWidth;
+
+            let pageY = 0;
+
+            while (pageY < canvasHeight) {
+              const pageCanvas = document.createElement("canvas");
+              pageCanvas.width = canvasWidth;
+              pageCanvas.height = Math.min(pageHeightPx, canvasHeight - pageY);
+
+              const pageContext = pageCanvas.getContext("2d");
+              pageContext.drawImage(
+                canvas,
+                0,
+                pageY,
+                canvasWidth,
+                pageCanvas.height,
+                0,
+                0,
+                canvasWidth,
+                pageCanvas.height
+              );
+
+              const pageImgData = pageCanvas.toDataURL("image/png");
+              pdf.addImage(pageImgData, "PNG", 0, 0, pdfWidth, (pdfWidth * pageCanvas.height) / canvasWidth);
+
+              pageY += pageHeightPx - 10;
+              if (pageY < canvasHeight) {
+                pdf.addPage();
+              }
+            }
+
+            pdf.save("curriculo.pdf");
+
+            curriculo.classList.remove("pdf-mode");
+
+            document.body.removeChild(loadingOverlay);
+          });
+
+        }
+
+        button.addEventListener('click', generatePdf);
+    </script>
 </body>
 </html>
